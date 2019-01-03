@@ -1,0 +1,39 @@
+Identity: Set of data that uniquely describes a person or an object
+          contains information about the subject's relationships to other entities
+          -stored in directory database
+          -in AD DS, 'identity' are called 'security principals'
+          -represented uniquely by the 'SID(Security Identifier, 보안계정)'
+          -used to access the resource
+          * for security = Authentication + Authorization (보안 = 인증 + 권한)
+Authentication: the process that verifies a user's identity through 'Credentials'
+          - Credential: ID + Password
+          - Authentication Type: Local(interactive) to 'Local computer'; stand-alone authentication(authorized by local SAM)
+                                 Remote(network) to 'Another computer'; joining to a domain
+Authorization: the process that determines whether to grant or deny a user a requested level of access to a resource
+          - Requirement: Resource/ Access request/ Security token
+          - 접근 '요청'을 하고, 접근되면 '보안 토큰'으로 허용된 권한을 사용 
+AIP: 
+          - Store information: users/ groups/ computers/ other identities
+          - Authenticate an identity: using Kerberos, identity in AD
+          - Control access
+          - Provide an audit trail
+AD DS Replication(multimaster replication model): between standard domain controllers/ RODCs
+          - Accuracy (integrity)/ Consistency(Convergence)/ Performance(keeping replication traffic at a resonable level)
+AD DS Partitions:
+          - Components: Application - Domain - Schema - Configuration
+SYSVOL:
+          - Contains: Logon scripts/ Group policy templates/ Group policy objects
+          - Sysvol replication: FRS/DFS to 숨겨진 시스템 파일을 복제하는 작업
+Policy: defines a specific configuration change
+          - Policy Setting Status: Not Configured/ Enabled/ Disabled
+GPO order: Local GPOs > Site-Level GPOs > Domain-Level GPOs > OU GPOs(including any nested OUs)
+PKI(인증서비스 방법): the combination of software, encryption technologies, processes, and services that enables an organization to secure its communications and buisiness transactions
+          - PKI and Cert. provide: Confidentiality/ Integrity/ Authenticity/ Non-repudiation/ Availabilityㅁ
+AD FS:
+          - Certificates used by AD FS: Service communication certificates,
+                    Token-signing certificates, Token-decrypting certificates
+          - Claims provider trusts: Identify the claims provider, configure the claim rules for the claims provider
+          - Single-organization scenario
+
+
+
