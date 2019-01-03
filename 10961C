@@ -1,0 +1,12 @@
+Powershell commands components: Cmdlets, Functions, Filters, Workflows
+Cmdlet verbs: Get, Set, New, Add, Remove
+Cmdlet Noun: Service, Process
+New-ADUser -name -department
+Pipeline: each console command line, 
+          commands separated by '|', 
+          commands execute from left to right
+Object members: Properties/ Methods/ Events  --> 'Get-member'
+To declare a variable: $name
+To clear a variable: $name = $null
+The script execution policy: 'Set-ExecutionPolicy -ExecutionPolicy (Restricted/AllSigned/ RemoteSigned/Unrestricted/Bypass)
+          Restricted/AllSigned/ RemoteSigned/Unrestricted/Bypass
