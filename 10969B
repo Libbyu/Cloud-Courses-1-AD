@@ -1,0 +1,74 @@
+Module 1: Overview of Access and Information Protection
+ " Overview of the different identity and access management solutions and how these solutions can be used to address business requirements."
+  Lesson 1: Introduction to Access and Information Protection Solutions in Business
+  Lesson 2: Overview of AIP Solutions in Windows Server 2012
+  Lesson 3: Overview of FIM 2010 R2
+  Lab: Choosing and Appropriate Access and Information Protection Management Solution
+  
+Module 2: Advanced Deployment and Administration of AD DS
+ "How deploy AD DS domain controllers in different scenarios using a variety of techniques. Also provides an overview of the tools available for managing AD DS."
+  
+  Lesson 1: Deploying AD DS
+    - Describe Identity:
+          'Security Principals'
+          "Set of data that unquely describes a person or an object" 
+          contains: information(subject's relationships to other entities)
+          *used to access the resource
+    - Describe authentication:
+          "process that verifies a user's identity"
+          method: credentials
+          type of log-on: Local(interactive)/ Remote(network)
+    - Describe authorization:
+          "the process that determines whether to grant or deny a user a requested level of access to a resource"
+          components: Resource/ Access request/ Security token
+    - Describe AD DS and AIP: 'Control Access'
+          "AIP solution for enterprise networks to secure enterprise resources such as files, email, applications, and databases."
+          -contains: users/ groups/ computers/ other identities
+    - Describe the business case for AIP control
+          -AIP offers: Reduce access workload/ Increase operational security/ Enable secure cross-org. collaboration/ Protect intellectual property
+    - Describe AIP management solutions:
+          
+    
+  Lesson 2: Deploying and Cloning Virtual Domain Controllers
+  Lesson 3: Deploying Domain Controllers in Windows Azure
+  Lesson 4: Administrating AD DS
+  Lab: Deploying and Admninistering AD DS
+
+
+Module 3: Securing AD DS
+ "the components and management practices that can be used to provide this security."
+  
+  Lesson 1: Securing Domain Controllers
+  Lesson 2: Implementing Account Security
+  Lesson 3: Implementing Audit Authentication
+  Lab: Securing AD DS
+
+
+Module 4: Implementing and Administering AD DS Sites and Replication
+ "How replication works in AD DS, and how to configure AD DS sites to optimize AD DS network traffic.
+  It also shows how to configure and monitor AD DS replication."
+  
+  Lesson 1: Overview of AD DS Replication
+  Lesson 2: Configuring AD DS Sites
+  Lesson 3: Configuring and Monitoring AD DS Replication
+  Lab: Implementing AD DS Sites and Replication
+  
+  
+Module 5: Implementing Group Policy
+ "How to plan and implement a Group Policy Object(GPO) deployment in AD DS."
+  
+  Lesson 1: Introducing Group Policy
+  Lesson 2: Implementing and Administering GPOs
+  Lesson 3: Group Policy Scope and Group Policy Processing
+  Lesson 4: Troubleshooting the Application of GPOs
+  Lab: Implementing and Troubleshooting a Group Policy Infrastructure
+
+
+Module 6: Managing User Settings with Group Policy
+ "How to use GPOs to manage user settings and desktop settings."
+  
+  Lesson 1: Implementing Administrative Templates
+  Lesson 2: Configuring Folder Redirection and Scripts
+  Lesson 3: Configuring Group Policy Preferences
+  Lab: Managing User Desktops with Group Policy
+
