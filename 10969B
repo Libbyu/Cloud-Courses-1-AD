@@ -20,6 +20,15 @@ Module 1: Overview of Access and Information Protection
           -AIP offers: Reduce access workload/ Increase operational security/ Enable secure cross-org. collaboration/ Protect intellectual property
     - Describe AIP management solutions:
   Lesson 2: Overview of AIP Solutions in Windows Server 2012
+    - Describe identity management in WS2012:
+          -roles and functionalities: AD CS/ AD RMS/ AD FS/ AD LDS/ DAC
+    - Describe AD CS(Active Directory Certificate Services)
+    - Describe AD RMS
+    - Describe AD FS
+    - Describe AD LDS
+    - Describe Windows Azure AD
+    - Describe DAC
+    - Describe Workplace Join
   Lesson 3: Overview of FIM 2010 R2
   Lab: Choosing and Appropriate Access and Information Protection Management Solution
   
