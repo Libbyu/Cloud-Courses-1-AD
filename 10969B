@@ -1,15 +1,7 @@
 Module 1: Overview of Access and Information Protection
  " Overview of the different identity and access management solutions and how these solutions can be used to address business requirements."
   Lesson 1: Introduction to Access and Information Protection Solutions in Business
-  Lesson 2: Overview of AIP Solutions in Windows Server 2012
-  Lesson 3: Overview of FIM 2010 R2
-  Lab: Choosing and Appropriate Access and Information Protection Management Solution
-  
-Module 2: Advanced Deployment and Administration of AD DS
- "How deploy AD DS domain controllers in different scenarios using a variety of techniques. Also provides an overview of the tools available for managing AD DS."
-  
-  Lesson 1: Deploying AD DS
-    - Describe Identity:
+      - Describe Identity:
           'Security Principals'
           "Set of data that unquely describes a person or an object" 
           contains: information(subject's relationships to other entities)
@@ -27,8 +19,14 @@ Module 2: Advanced Deployment and Administration of AD DS
     - Describe the business case for AIP control
           -AIP offers: Reduce access workload/ Increase operational security/ Enable secure cross-org. collaboration/ Protect intellectual property
     - Describe AIP management solutions:
-          
-    
+  Lesson 2: Overview of AIP Solutions in Windows Server 2012
+  Lesson 3: Overview of FIM 2010 R2
+  Lab: Choosing and Appropriate Access and Information Protection Management Solution
+  
+Module 2: Advanced Deployment and Administration of AD DS
+ "How deploy AD DS domain controllers in different scenarios using a variety of techniques. Also provides an overview of the tools available for managing AD DS."
+  
+  Lesson 1: Deploying AD DS    
   Lesson 2: Deploying and Cloning Virtual Domain Controllers
   Lesson 3: Deploying Domain Controllers in Windows Azure
   Lesson 4: Administrating AD DS
