@@ -8,3 +8,6 @@ function add{
 
 -->입력시 : add 1 2
 >output 3
+
+
+net use s:\\c
