@@ -1,0 +1,10 @@
+함수만들기
+
+function add{
+  param($a, $b)
+  $c = $a + $b
+  Write-Host $c
+}
+
+-->입력시 : add 1 2
+>output 3
