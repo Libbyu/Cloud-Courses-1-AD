@@ -1,0 +1,15 @@
+Get-ADComputer -Filter * | Get-Service -Name *
+Get-ADComputer -Filter * | Get-Member
+Get-ADComputer -Filter * | Select @{n='ComputerName';e={$_.name}} | Get-Service -Name * 
+Get-ADComputer -Filter * | Select @{n='ComputerName';e={$_.name}} | Get-WmiObject -Class Win32_BIOS 
+Get-WmiObject -class win32_bios
+Get-Service -ComputerName {n='ComputerName';e={[ServiceController]$(Get-ADComputer -filter *).name}}
+Get-EventLog -LogName Security -ComputerName (Get-ADComputer lon-dc1 | Select -ExpandProperty Name)
+Get-help Get-Service -ShowWindow
+
+$computername = Get-ADComputer -Filter * | Select @{n='ComputerName';e={$_.name}}
+Get-ADComputer -Filter * | Select @{n='ComputerName';e={$_.name}} | get-eventlog -Newest 50 -LogName * 
+get-help Set-Service
+
+Get-ADComputer -Filter * | Select @{n='ComputerName';e={$_.name}} | Set-Service WinRM -StartupType Automatic
+Set-Service WinRM -StartupType Automatic -ComputerName LON-DC1, LON-CL1
