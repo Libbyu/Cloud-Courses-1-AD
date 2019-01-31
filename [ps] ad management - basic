@@ -1,0 +1,68 @@
+New-ADGroup -Name IPPhoneTest -Path "ou=IT, dc=Adatum, dc=com" -GroupScope Global
+New-ADUser -Path "cn=IPPhoneTest, ou=IT, dc=Adatum, dc=com" -Name "Abbi Skinner"
+New-ADUser -Path "cn=IPPhoneTest, ou=IT, dc=Adatum, dc=com" -Name "Ida Alksne"
+New-ADUser -Path "cn=IPPhoneTest, ou=IT, dc=Adatum, dc=com" -Name "Parsa Schoonen"
+New-ADUser -Path "cn=IPPhoneTest, ou=IT, dc=Adatum, dc=com" -Name "Tonia Guthrie"
+Get-ADUser -Filter {group -eq "IPPhoneTest"}
+$users1 = Get-ADUser -Filter *
+$users1[-1]
+$users1
+New-ADUser -Department "IPPhoneTest" -Name "Abbi Skinner"
+New-ADUser -Department "IPPhoneTest" -Name "Ida Alksne"
+New-ADUser -Department "IPPhoneTest" -Name "Parsa Schoonen"
+New-ADUser -Department "IPPhoneTest" -Name "Tonia Guthrie"
+Get-ADUser -Filter {department -eq "IPPhoneTest"} -Properties department
+$users1
+Set-ADGroup -Identity "ou=IT, dc=Adatum, dc=com"
+Get-ADUser -Filter {department -eq "IT"} -Properties department
+Get-ADGroup -Identity "IPPhoneTest"
+Get-ADUser -Identity "Abbi Skinner"
+
+#Task 2
+Get-ExecutionPolicy
+Install-Script "E:\Mod08\Labfiles\ipPhone.ps1"
+Get-ADUser -Filter {department -eq "IPPhoneTest"} -Properties department
+$users2 = Get-ADUser -Filter {department -eq "IPPhoneTest"} -Properties department
+$replace = Set-ADUser -department "IPPhone"
+ForEach ($u in $users2){
+    Set-ADUser $u -Department "IPPhone"
+}
+$users2.department
+
+#Exercise 3 - Task 1
+get-help *print*spooler*
+get-help *script*
+Update-Script "Get-Service"
+get-help update-script
+
+get-help Set-Content
+Set-Content "Get-Service" -path "E:\Mod08\Labfiles\services.txt" 
+Get-Content "E:\Mod08\Labfiles\services.txt"
+get-help *windowstime*
+get-help *w32time*service*
+
+"" > E:\Mod08\Labfiles\services.txt
+get-service Spooler >> E:\Mod08\Labfiles\services.txt
+get-service W32Time >> E:\Mod08\Labfiles\services.txt
+
+"" > E:\mod08\Labfiles\StartServices.ps1
+cd E:\Mod08\Labfiles\
+.\StartServices.ps1
+.\services.txt
+$services = Get-Content .\services.txt
+(Get-Service $services).Status
+
+ForEach ($s in $services){
+    $Status = (Get-Service $s).Status
+    If ($Status -eq "Stopped"){
+        Start-Service $s
+        Write-Host "$s is started"}
+    Else {
+        Write-Host "No action was Required."
+    }
+} >> .\startservices.ps1
+
+$passwordLength = 8
+For 
+[int]$number = if ($n Get-Random -ge 65 -
+[string]$char = "$number"
