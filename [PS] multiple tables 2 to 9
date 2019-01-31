@@ -1,0 +1,18 @@
+for ($i=2; $i -le 9; $i++){
+
+    for($j=1; $j -le 9; $j++){
+        
+        Write-Host (" " + $i + " * " + $j + " = " + $i*$j)
+
+    }
+}
+
+
+for ($i=2; $i -le 9; $i++){
+    
+    for($j=1; $j -le 9; $j++){
+
+        Write-Host $i * $j = ($i*$j)
+
+    }
+}
