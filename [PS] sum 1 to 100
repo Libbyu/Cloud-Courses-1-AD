@@ -1,0 +1,22 @@
+#for
+$sum=0
+for($i=0; $i -le 100; $i++){
+    
+    $sum += $i}
+
+    Write-Host $sum
+
+
+##Explanation
+# 1 = 0 + 1 ->$a <- 1
+# 3 = 1 + 2 ->$a <- 2
+# 6 = 3 + 3 ->$a <- 3
+#20 = 6 + 4 ->$a <- 4
+
+
+#foreach
+$num = 1..10
+$sum = 0
+foreach($n in $num){ $sum += $n}
+    
+    Write-Host $sum
