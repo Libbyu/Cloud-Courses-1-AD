@@ -1,0 +1,71 @@
+#추가문제
+
+<# Main #>
+$Main =  " * Adatum.com 계정관리 `n"
+$Main += " 1) 계정생성 `n"
+$Main += " 2) 계정수정 `n"
+$Main += " 3) 계정삭제 `n"
+$Main += " 4) 계정확인 `n"
+$Main += " 5) 종료 `n"
+Write-Host "$Main"
+[Int]$Number = Read-Host "번호를 입력하세요"
+
+$AllUsers = Get-ADUser -Filter *
+<#1)계정생성
+While($Number -eq 1){
+    Write-Host "1) 계정생성 "
+    $userId = Read-Host "ID "
+    $userPw = Read-Host "PW "
+    Write-Host "아이디가 생성되었습니다."
+    Break
+}
+#>
+#1)계정생성 
+While ($Number -eq 1){
+    Write-Host "1) 계정생성 "
+    $userId = Read-Host "ID "
+    $userPw = ConvertTo-SecureString -AsPlainText (Read-Host "PW ") -Force
+    New-ADUser -Name $userID -SamAccountName $userID -AccountPassword $userPw -Enabled $true
+    Write-Host "아이디가 생성되었습니다."
+    Break
+}
+#2)계정수정
+##$userId = Read-Host "ID "
+##Get-ADUser -filter {samaccountname -eq $userId} -Properties samaccountname
+While($Number -eq 2){
+    Write-Host "2) 계정 비밀번호 수정 "
+    $userId = Read-Host "ID "
+    $userPw1 = ConvertTo-SecureString -AsPlainText (Read-Host "기존의 PW를 입력하시오. ") -Force
+    $userPw2 = ConvertTo-SecureString -AsPlainText (Read-Host "수정할 PW를 입력하시오. ") -Force 
+    Set-ADAccountPassword $userId -OldPassword $userPw1 -NewPassword $userPw2
+    Write-Host "비밀번호가 수정되었습니다."
+    Break
+}
+get-help Set-ADAccountPassword -ShowWindow
+##get-help Set-ADAccountPassword -ShowWindow
+#Hash table로 만드는게 관리가 더 쉬울듯
+#3)계정삭제
+##Get-Help Remove-ADUser
+While($Number -eq 3) {
+    Write-Host "3) 계정삭제 "
+    $userId = Read-Host "ID"
+    $userPw = ConvertTo-SecureString -AsPlainText (Read-Host "삭제를 위해 PW를 입력해주세요.") -Force
+    If ((Get-ADUser -filter {samaccountname -eq $userId} | Select -Property AccountPassword) -ne $userPw){
+        $userPw = Read-Host "비밀번호가 틀렸습니다. 다시 입력해주세요."}
+    Get-ADUser -filter {samaccountname -eq $userId} | Remove-ADUser
+    Write-Host "계정이 성공적으로 삭제되었습니다"
+    Break
+    }
+##$AllUsers.samaccountname
+#4)계정확인
+While($Number -eq 4) {
+    Write-Host "4) 계정확인 "
+    If (($userId = Read-Host "ID") -eq $AlluserId.samaccountname){
+        Write-Host "계정이 이미 존재합니다"}
+    Break
+ }
+
+#5)종료
+While($Number -eq 5){
+    Break
+}
